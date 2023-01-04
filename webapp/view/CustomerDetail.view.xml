@@ -1,0 +1,5 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomerDetails" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="_IDGenPage1" showNavButton="true" navButtonPress="handleNameButtonPress" title="CompanyName" >
+        
+    </Page>
+</mvc:View>
