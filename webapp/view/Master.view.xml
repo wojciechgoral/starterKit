@@ -14,6 +14,22 @@
                                 <CarouselLayout id="logoLayout" visiblePagesCount ="3"/>
                             </customLayout>
                         </Carousel>
+                        <Table id ="customerTable" items="{/Customers}">
+                            <columns>
+                                <Column id ="comName">
+                                    <Label id="compName" text="{i18n>CompanyName}"/>
+                                </Column>
+                                <Column id ="colCou">
+                                    <Label id="labCou" text="{i18n>Country}"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="colItems">
+                                    <Text id="comItem" text="{CompanyName}"/>
+                                    <Text id="couItem" text="{Country}"/>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
                     </content>
                 </Page>
             </pages>
