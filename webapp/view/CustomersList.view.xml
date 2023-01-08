@@ -1,5 +1,9 @@
 <mvc:View controllerName="stk.starterkit.controller.CustomersList" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="_IDGenPage2" showNavButton="true" navButtonPress="handleNameButtonPress" title="CompanyName" >
+
+
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" showNavButton="true" navButtonPress="handleNameButtonPress" title="CompanyName" >
+        
+        
         <content>
                         <Carousel id="mainImages" height ="37%">
                             <pages>
@@ -14,19 +18,21 @@
                         <Table id ="customerTable" items="{/Customers}">
                             <columns>
                                 <Column id ="comName">
-                                    <Label id="compName" text="{i18n>CompanyName}"/>
+                                    <Label id="compName" text="{i18n>companyName}"/>
                                 </Column>
                                 <Column id ="colCou">
-                                    <Label id="labCou" text="{i18n>Country}"/>
+                                    <Label id="labCou" text="{i18n>country}"/>
                                 </Column>
                             </columns>
                             <items>
-                                <ColumnListItem id="colItems">
+                                <ColumnListItem id="colItems" type="Navigation" press="onCustomerPress">
                                     <Text id="comItem" text="{CompanyName}"/>
                                     <Text id="couItem" text="{Country}"/>
                                 </ColumnListItem>
                             </items>
                         </Table>
-                    </content>
+        </content>
+        
     </Page>
+
 </mvc:View>

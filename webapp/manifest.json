@@ -99,20 +99,34 @@
       },
       "routes": [
         {
-          "name": "RouteMaster",
-          "pattern": ":?query:",
+          "name": "CustomersList",
+          "pattern": "",
           "target": [
-            "TargetMaster"
+            "CustomersList"
+          ]
+        },
+        {
+          "name": "CustomerDetails",
+          "pattern": "CustomerDetails/{CustomerID}",
+          "target": [
+            "CustomerDetails"
           ]
         }
       ],
       "targets": {
-        "TargetMaster": {
+        "CustomerDetails": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "Master",
-          "viewName": "Master"
+          "viewId": "CustomerDetails",
+          "viewName": "CustomerDetails"
+        },
+        "CustomersList": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CustomersList",
+          "viewName": "CustomersList"
         }
       }
     },

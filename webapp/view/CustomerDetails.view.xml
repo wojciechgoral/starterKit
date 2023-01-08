@@ -1,0 +1,27 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomerDetails" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails" showNavButton="true" navButtonPress="handleNameButtonPress" title="{CompanyName}" >
+         <content>
+                        
+                        <Table id ="OrderID" items="{path:'/Orders', parameters:{expand: 'Employee', select: 'OrderID, OrderDate, Employee/LastName, Employee/FirstName'}}">
+                            <columns>
+                                <Column id ="Orderid">
+                                    <Label id="laborder" text="{i18n>orderID}"/>
+                                </Column>
+                                <Column id ="employee">
+                                    <Label id="labemp" text="{i18n>employee}"/>
+                                </Column>
+                                <Column id ="date">
+                                    <Label id="labdate" text="{i18n>date}"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="colItems">
+                                    <Text id="ordItem" text="{OrderID}"/>
+                                    <Text id="empItem" text="{Employee/FirstName}"/>
+                                    <Text id="dateItem" text="{OrderDate}"/>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+        </content>
+    </Page>
+</mvc:View>
