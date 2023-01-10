@@ -1,0 +1,61 @@
+<core:FragmentDefinition xmlns:form="sap.ui.layout.form" id="core" xmlns="sap.m" xmlns:core="sap.ui.core">
+
+    <Dialog id="contactDialog" >
+    
+        <content>
+            <form:Form id="_IDGenForm122" >
+                <form:title>
+                    <core:Title id="_IDGenTitle165653" text ="Contact Details"/>
+                </form:title>
+                <form:layout>
+				    <form:ColumnLayout id="_IDGenColumnLayout1" 
+					columnsXL="4"
+				    />
+			    </form:layout>
+                <form:formContainers>
+                    <form:FormContainer id="_IDGenFormContainer1330" >
+                        <form:formElements >
+                            <form:FormElement id="_IDGenFormElement1" label="Name">
+                                <form:fields>
+                                    <Text id="_IDGenText1447" text="{ContactName}"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                     <form:FormContainer id="_IDGenFormContainer1339" >
+                        <form:formElements >
+                            <form:FormElement id="_IDGenFormElement123" label="Contact Title">
+                                <form:fields>
+                                    <Text id="_IDGenText1484" text="{ContactTitle}"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                     <form:FormContainer id="_IDGenFormContainer1338" >
+                        <form:formElements >
+                            <form:FormElement id="_IDGenFormElement1444" label="Address">
+                                <form:fields>
+                                    <Text id="_IDGenText1449" text="{Address}"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                     <form:FormContainer id="_IDGenFormContainer1337" >
+                        <form:formElements >
+                            <form:FormElement id="_IDGenFormElement1555" label="Phone">
+                                <form:fields>
+                                    <Text id="_IDGenText14499" text="{Phone}"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                    </form:FormContainer>
+                </form:formContainers>
+            </form:Form>
+            
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton1444" text="Close" press=".onCloseDialog" type="Negative"/> 
+        </beginButton>
+    </Dialog>
+
+</core:FragmentDefinition>

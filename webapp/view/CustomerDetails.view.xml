@@ -1,8 +1,24 @@
 <mvc:View controllerName="stk.starterkit.controller.CustomerDetails" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails" showNavButton="true" navButtonPress="handleNameButtonPress" title="{CompanyName}" >
+                
+			<customHeader>
+			<Toolbar id="_IDGenToolbar1">
+				<Button id="_IDGenButton1" type="Back" press="onPress" />
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<Title id="_IDGenTitle1543" text="Title" level="H2"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+				<Button id="_IDGenButton299867" text= "Show Contact Info" type="Transparent" press="onPress" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+
+		</customHeader>
+
+	
+         
          <content>
-                        
-                        <Table id ="OrderID" items="{path:'/Orders', parameters:{expand: 'Employee', select: 'OrderID, OrderDate, Employee/LastName, Employee/FirstName'}}">
+            
+                        <Table id ="OrderID" items="{path:'/Orders', parameters: {
+                            expand: 'Employee', select: 'OrderID, OrderDate, Employee/LastName, Employee/FirstName'
+                        }}">
                             <columns>
                                 <Column id ="Orderid">
                                     <Label id="laborder" text="{i18n>orderID}"/>
@@ -17,8 +33,8 @@
                             <items>
                                 <ColumnListItem id="colItems">
                                     <Text id="ordItem" text="{OrderID}"/>
-                                    <Text id="empItem" text="{Employee/FirstName}"/>
-                                    <Text id="dateItem" text="{OrderDate}"/>
+                                    <Text id="empItem" text="{parts: [{path: 'Employee/FirstName'},{path: 'Employee/LastName'}],  formatter: '.formatter.formatName'}"/>
+                                    <Text id="dateItem" text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style:'medium'}}"/>
                                 </ColumnListItem>
                             </items>
                         </Table>
