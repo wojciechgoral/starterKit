@@ -1,0 +1,47 @@
+<mvc:View controllerName="stk.starterkit.controller.CreateCustomer" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CreateCustomer" showNavButton="true" navButtonPress="handleNameButtonPress" title="CreateCustomer" >
+        <Toolbar id="_IDGenToolbar122">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+				<Button id="_IDGenButton299867" text= "Create" type="Success" press="onCreatePress" icon="sap-icon://accept"/>
+		</Toolbar>
+       <content>
+            <form:Form id="_IDGenForm122" >
+                
+                <form:layout>
+				    <form:ResponsiveGridLayout id="_IDGenResponsiveGridLayout1"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" />
+			    </form:layout>
+                <form:formContainers>
+                <form:FormContainer id="_IDGenFormContainer1">
+                    <form:formElements>
+                        <form:FormElement id="_IDGenFormElement1" label="{i18n>customerID}">
+                            <form:fields>
+                                <Input value="" id="CustomerID"/>
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement id="_IDGenFormElement2" label="{i18n>customerName}">
+                            <form:fields>
+                                <Input value="" id="CustomerName"/>
+                            </form:fields>
+                        </form:FormElement>
+                    </form:formElements>
+                </form:FormContainer>
+            </form:formContainers>
+        </form:Form>
+
+       </content>
+    </Page>
+</mvc:View>

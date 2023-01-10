@@ -20,3 +20,8 @@ sap.ui.define([
         CustomerID:oEvent.getSource().getBindingContext().getObject().CustomerID
     })
 };
+
+function onCreateCustomerPress (){
+    const oRouter = sap.ui.core.UIComponent.getRouterFor(this)
+    oRouter.navTo("CreateCustomer")
+};

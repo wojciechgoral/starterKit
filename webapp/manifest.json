@@ -111,6 +111,13 @@
           "target": [
             "CustomerDetails"
           ]
+        },
+        {
+          "name": "CreateCustomer",
+          "pattern": "CreateCustomer",
+          "target": [
+            "CreateCustomer"
+          ]
         }
       ],
       "targets": {
@@ -127,6 +134,13 @@
           "clearControlAggregation": false,
           "viewId": "CustomersList",
           "viewName": "CustomersList"
+        },
+        "CreateCustomer": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CreateCustomer",
+          "viewName": "CreateCustomer"
         }
       }
     },

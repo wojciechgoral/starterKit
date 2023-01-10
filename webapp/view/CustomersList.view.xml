@@ -3,7 +3,14 @@
 
     <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomersList" showNavButton="true" navButtonPress="handleNameButtonPress" title="CompanyName" >
         
-        
+    
+			<Toolbar id="_IDGenToolbar122">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+				<Button id="_IDGenButton299867" text= "Create New Customer" type="Transparent" press="onCreateCustomerPress" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+
+		
         <content>
                         <Carousel id="mainImages" height ="37%">
                             <pages>
