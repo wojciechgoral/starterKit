@@ -1,0 +1,46 @@
+<mvc:View controllerName="stk.starterkit.controller.Employees" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" >
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="Employees" showNavButton="true" navButtonPress="handleNameButtonPress" title="Employees" >
+        <Toolbar id="_IDGenToolbar122">
+				<ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Title id="_IDGenTitle1" text = "{i18n>performance}"/>
+				<ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+				
+		</Toolbar>
+       <content>
+                        
+                        <Table id ="customerTable" items="{path:'/Employees', 
+                                parameters:{expand: 'Orders', select: 'LastName, FirstName, Title, Orders/OrderID'}}">
+                            <columns>
+                                <Column id ="empName2" hAlign="Begin">
+                                    <Label id="empName23" text="{i18n>employeeName}"/>
+                                </Column>
+                                <Column id ="empPos2" hAlign="Center">
+                                    <Label id="empPos" text="{i18n>employeePosition}"/>
+                                </Column>
+                                <Column id ="empPos3p" hAlign="Center">
+                                    <Label id="empPos3" text="{i18n>Orders}"/>
+                                </Column>
+                                <Column id ="buttons" hAlign="Center">
+                                    <Label id="actions" text="{i18n>actions}"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="colItems">
+                                    <Text id="_IDGenText2" text = "{FirstName} {LastName}" />
+                                    <Text id="_IDGenText3" text="{Title}"/>
+                                    <Text id="_IDGenText4" text = "{=${Orders}.length}" />
+                                    <FlexBox id="_IDGenFlexBox1" justifyContent="Center">
+                                    <Button id="motivationButton" text="{i18n>motivate}" press= "onMotivatePress"
+                                        ariaDescribedBy="MotivateButtonDescription genericButtonDescription"
+                                        type="Emphasized" class="fireMotivateButton"/>
+                                    <Button id="fireButton" text="{i18n>fire}"
+                                         press= "onFirePress"
+                                        ariaDescribedBy="FireButtonDescription genericButtonDescription"
+                                        type="Reject" class="fireMotivateButton"/>
+                                    </FlexBox>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -25,3 +25,8 @@ function onCreateCustomerPress (){
     const oRouter = sap.ui.core.UIComponent.getRouterFor(this)
     oRouter.navTo("CreateCustomer")
 };
+
+function onEmployeesPress (){
+    const oRouter = sap.ui.core.UIComponent.getRouterFor(this)
+    oRouter.navTo("Employees")
+};

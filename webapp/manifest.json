@@ -118,6 +118,13 @@
           "target": [
             "CreateCustomer"
           ]
+        },
+        {
+          "name": "Employees",
+          "pattern": "Employees",
+          "target": [
+            "Employees"
+          ]
         }
       ],
       "targets": {
@@ -141,6 +148,13 @@
           "clearControlAggregation": false,
           "viewId": "CreateCustomer",
           "viewName": "CreateCustomer"
+        },
+        "Employees": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Employees",
+          "viewName": "Employees"
         }
       }
     },
